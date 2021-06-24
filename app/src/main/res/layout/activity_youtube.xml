@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mainColor"
+        tools:context=".ui.fragment.youtube.videos.YoutubeActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_youtube"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:navigationIcon="@drawable/ic_back" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_youtube"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar_youtube"
+            android:clipToPadding="false"
+            android:paddingBottom="60dp"
+            tools:listitem="@layout/format_youtube" />
+
+        <ProgressBar
+            android:id="@+id/progressBar_youtube"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</layout>
